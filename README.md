@@ -1,8 +1,12 @@
+
+
 # Game Compliance Pack for Unity
 
 Local-first Unity Editor tooling to scan a Unity project for third-party components and generate deterministic, release-ready attribution artifacts (third-party notices, credits, and a compliance manifest).
 
 This repository contains documentation and examples only. It does not include the commercial source code.
+
+![Overview Image](Screenshots/Overview.jpg)
 
 ## Get the tool
 
@@ -21,7 +25,7 @@ Unity projects routinely accumulate third-party software from multiple sources:
 
 At ship time you need to identify what is third-party, find the actual license terms, assemble correct notices and attributions, and keep the result stable across updates and builds. Without a system, this becomes manual, error-prone, and often happens too late.
 
-![Image](Image1.jpg)
+![Who it's for](Screenshots/Who its for and not.jpg)
 
 ## What the tool generates (release-ready outputs)
 
